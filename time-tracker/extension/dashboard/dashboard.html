@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Productivity Dashboard</h1>
+        <p>Insights into your focus and website usage</p>
+      </header>
+
+      <section class="card overview">
+        <h2>Today Overview</h2>
+        <div class="overview-grid">
+          <div>
+            <div class="label">Total Time</div>
+            <div id="totalTime" class="value">0s</div>
+          </div>
+          <div>
+            <div class="label">Productive %</div>
+            <div id="productivePercent" class="value">0%</div>
+          </div>
+          <div>
+            <div class="label">Unproductive %</div>
+            <div id="unproductivePercent" class="value">0%</div>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="mini-card green">Productive <strong id="productiveTime">0s</strong></div>
+          <div class="mini-card red">Unproductive <strong id="unproductiveTime">0s</strong></div>
+          <div class="mini-card gray">Neutral <strong id="neutralTime">0s</strong></div>
+        </div>
+
+        <canvas id="donutChart" height="220"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Top Websites Today</h2>
+        <canvas id="barChart" height="220"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Weekly Report</h2>
+        <canvas id="lineChart" height="220"></canvas>
+      </section>
+
+      <section class="card score-card">
+        <h2>Productivity Score</h2>
+        <div id="scoreValue" class="score-value">0</div>
+        <div id="scoreMessage" class="score-message">Loading...</div>
+      </section>
+
+      <section class="card">
+        <h2>Website List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Category</th>
+              <th>Time Today</th>
+              <th>Time This Week</th>
+            </tr>
+          </thead>
+          <tbody id="siteTableBody"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

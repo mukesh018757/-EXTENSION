@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracker Popup</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-container">
+      <h2>TimeTracker Pro</h2>
+      <div class="summary-card">
+        <div class="summary-title">Today</div>
+        <div id="totalTime" class="big-value">0s</div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card productive">
+          <span>Productive</span>
+          <strong id="productiveTime">0s</strong>
+          <small id="productivePercent">0%</small>
+        </div>
+        <div class="stat-card unproductive">
+          <span>Unproductive</span>
+          <strong id="unproductiveTime">0s</strong>
+          <small id="unproductivePercent">0%</small>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Top websites</div>
+        <div id="topSites"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Current site</div>
+        <div id="currentSite">Loading...</div>
+        <div id="currentSiteTime">0s</div>
+      </div>
+
+      <div class="actions">
+        <button id="togglePause">Pause Tracking</button>
+        <button id="openDashboard">Open Dashboard</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

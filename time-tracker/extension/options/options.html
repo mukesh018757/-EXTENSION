@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extension Settings</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; background: #f8fafc; color: #0f172a; }
+      .card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+      input, select, button { padding: 8px; margin-top: 6px; width: 100%; box-sizing: border-box; }
+      button { background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; }
+      .row { display: flex; gap: 10px; align-items: center; }
+      .chip { display: inline-block; background: #e2e8f0; padding: 4px 8px; border-radius: 999px; margin: 4px 4px 0 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Settings</h1>
+
+    <div class="card">
+      <h3>Custom Productive Websites</h3>
+      <input id="productiveInput" placeholder="Enter domain" />
+      <button id="addProductive">Add Productive Site</button>
+      <div id="productiveList"></div>
+    </div>
+
+    <div class="card">
+      <h3>Custom Unproductive Websites</h3>
+      <input id="unproductiveInput" placeholder="Enter domain" />
+      <button id="addUnproductive">Add Unproductive Site</button>
+      <div id="unproductiveList"></div>
+    </div>
+
+    <div class="card">
+      <h3>Daily Goal</h3>
+      <input id="goalInput" type="number" min="1" />
+      <button id="saveGoal">Save Goal</button>
+    </div>
+
+    <div class="card">
+      <h3>Idle Detection</h3>
+      <label><input id="idleEnabled" type="checkbox" /> Enable idle detection</label>
+      <select id="idleTimeout">
+        <option value="5">5 minutes</option>
+        <option value="10">10 minutes</option>
+        <option value="15">15 minutes</option>
+        <option value="30">30 minutes</option>
+      </select>
+      <button id="saveIdle">Save Settings</button>
+    </div>
+
+    <div class="card">
+      <h3>Notifications</h3>
+      <input id="unproductiveThreshold" type="number" placeholder="30" />
+      <input id="dailySummaryTime" type="time" />
+      <button id="saveNotifications">Save Notifications</button>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
